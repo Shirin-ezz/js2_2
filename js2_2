@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Numbered List</title>
+</head>
+<body>
+  <script>
+    // Create a string with several names separated by a comma
+    let namesString = "Pat, Chris, Marlon, Ferncroft, Assunta";
+
+    // Split the string into an array of names
+    let namesArray = namesString.split(", ");
+
+    // Use map to create list items
+    let listItems = namesArray.map((name, index) => `<li>${index + 1}. ${name}</li>`);
+
+    // Join the list items into a single string and wrap in <ol> tags
+    let htmlList = `<ol>${listItems.join('')}</ol>`;
+
+    // Display the HTML list
+    document.write(htmlList);
+  </script>
+</body>
+</html>
