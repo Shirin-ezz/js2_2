@@ -1,23 +1,23 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Numbered List</title>
-  <script>
-    // Create a string with several names separated by a comma
-    let namesString = "Shirin, Farhad, Ali, Arshia, Payman";
-
-    // Split the string into an array of names
-    let namesArray = namesString.split(", ");
-
-    // Use map to create list items without manual numbering
-    let listItems = namesArray.map(name => `<li>${name}</li>`);
-
-    // Join the list items into a single string and wrap in <ol> tags
-    let htmlList = `<ol>${listItems.join('')}</ol>`;
-
-    // Display the HTML list
-    document.write(htmlList);
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem 2: Numbered List</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let namesString = "Shirin, Arshia, Payman, Farhad, Fereshteh";
+            let namesArray = namesString.split(", ");
+            let numberedList = "<ol>";
+            namesArray.forEach(name => {
+                numberedList += `<li>${name}</li>`;
+            });
+            numberedList += "</ol>";
+            $("body").append(numberedList);
+        });
+    </script>
 </head>
 <body>
 </body>
